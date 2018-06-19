@@ -43,7 +43,7 @@ public class JobController {
     public String add(Model model, @Valid JobForm jobForm, Errors errors) {
 
         if (errors.hasErrors()) {
-            model.addAttribute(new JobForm());
+            model.addAttribute("name", "new-job");
             return "new-job";
         }
 
